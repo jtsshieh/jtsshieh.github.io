@@ -21,6 +21,7 @@ img {
     max-height: 100%;
     width: auto;
     height: auto;
+    animation: fade 1s, zoom 1s;
 }
 
 #bg-image {
@@ -32,7 +33,8 @@ img {
   
     background-position: center;
     background-repeat: no-repeat;
-    height: 100%
+    height: 100%;
+    animation: fade 1s;
 }
 #content {
     background-color: rgba(0,0,0,0.7);
@@ -47,6 +49,7 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: backgroundFade 2s;
 }
 
 #image {
@@ -72,6 +75,8 @@ img {
     font-weight: 600;
     font-size: 3em;
     text-align: center;
+    animation: fade 1s, zoom 1s;
+    margin-bottom: 0;
 }
 
 #text h2 {
@@ -79,9 +84,12 @@ img {
     font-weight: 400;
     font-size: 1em;
     text-align: center;
-    margin-bottom: 10%;
+    animation: fade 1s, zoom 1s;
 }
 
+#text .description {
+    margin-bottom: 10%;
+}
 #text .button {
     font-family: 'Montserrat', sans-serif;
     background-color: #00afff;
@@ -92,11 +100,19 @@ img {
     text-align: center;
     width: 30%;
     margin-top: 5%;
+    animation: fade 1s, zoom 1s;
 }
 
 #text .button:hover {
     background-color: #33bfff;
     cursor: pointer;
+}
+
+
+.loading *,
+.loading *:before,
+.loading *:after {
+  animation-play-state: paused !important;
 }
 
 /* Landscape  -- display content in rows, not columns*/
@@ -146,7 +162,7 @@ img {
     }
 } 
 
-/* Landscape tall display (ex: computers */
+/* Landscape tall display (ex: computer)s */
 @media only screen and (min-height: 768px) and (orientation: landscape){
     #text h1 {
         font-size: 5em;
@@ -162,3 +178,49 @@ img {
     }
     
 }    
+
+/* Landscape short display (ex: phones) */
+@media only screen and (max-height: 450px) and (orientation: landscape){
+    #text h1 {
+        font-size: 2em;
+    }
+    
+    #text h2 {
+        font-size: 1em;
+    }
+
+    #text .button {
+        font-size: 1em;
+    }
+    
+}    
+
+@keyframes fade {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+@keyframes zoom {
+    from {
+        transform: scale(.5);
+    }
+    to {
+        transform: none;
+    }
+}
+
+@keyframes backgroundFade {
+    from {
+        background-color: rgb(0,0,0);
+    }
+
+    to {
+        background-color: rgba(0,0,0,0.7);
+    }
+}
