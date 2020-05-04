@@ -7,25 +7,8 @@ html, body {
     overflow: hidden;
 }
 
-h1 {
-    color: white;
-}
-
-h2 {
-    color: white;
-}
-
-img {
-    border-radius: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    animation: fade 1s, zoom 1s;
-}
-
 #bg-image {
-    background-image: url("images/Background.jpg");
+    background-image: url("images/bg.jpg");
     background-size: cover;
 
     filter: blur(8px);
@@ -36,20 +19,23 @@ img {
     height: 100%;
     animation: fade 1s;
 }
-#content {
+
+#splash {
+    animation: backgroundFade 2s;
     background-color: rgba(0,0,0,0.7);
-    z-index: 2;
+    z-index: 3;
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     width: 100%;
     height: 100%;
+
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: backgroundFade 2s;
+    top: 0;
+    left: 0;
 }
 
 #image {
@@ -57,6 +43,15 @@ img {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 10%
+}
+
+#image img {
+    border-radius: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    animation: fade 1s, zoom 1s;
 }
 
 #text {
@@ -73,8 +68,10 @@ img {
 #text h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 3em;
+    font-size: 300%;
+    color: white;
     text-align: center;
+
     animation: fade 1s, zoom 1s;
     margin-bottom: 0;
 }
@@ -82,8 +79,10 @@ img {
 #text h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 1em;
+    font-size: 100%;
     text-align: center;
+    color: white;
+
     animation: fade 1s, zoom 1s;
 }
 
@@ -93,7 +92,7 @@ img {
 #text .button {
     font-family: 'Montserrat', sans-serif;
     background-color: #00afff;
-    font-size: 1em;
+    font-size: 100%;
     color: white;
     padding: 2% 1.5%;
     text-decoration: none;
@@ -117,7 +116,7 @@ img {
 
 /* Landscape  -- display content in rows, not columns*/
 @media only screen and (orientation: landscape) {
-    #content {
+    #splash{
         flex-direction: row;
     }
 
@@ -142,14 +141,14 @@ img {
 @media only screen and (min-width: 768px) and (orientation: portrait){
     
     #text h1 {
-        font-size: 5em;
+        font-size: 500%;
     }
     
     #text h2 {
-        font-size: 2em;
+        font-size: 200%;
     }
     #text .button {
-        font-size: 2em;
+        font-size: 200%;
         padding: 4% 10%;
     }
 } 
@@ -165,15 +164,15 @@ img {
 /* Landscape tall display (ex: computer)s */
 @media only screen and (min-height: 768px) and (orientation: landscape){
     #text h1 {
-        font-size: 5em;
+        font-size: 500%;
     }
     
     #text h2 {
-        font-size: 2em;
+        font-size: 200%;
     }
 
     #text .button {
-        font-size: 2em;
+        font-size: 200%;
         padding: 4% 10%;
     }
     
@@ -182,15 +181,15 @@ img {
 /* Landscape short display (ex: phones) */
 @media only screen and (max-height: 450px) and (orientation: landscape){
     #text h1 {
-        font-size: 2em;
+        font-size: 200%;
     }
     
     #text h2 {
-        font-size: 1em;
+        font-size: 100%;
     }
 
     #text .button {
-        font-size: 1em;
+        font-size: 100%;
     }
     
 }    
@@ -208,7 +207,7 @@ img {
 
 @keyframes zoom {
     from {
-        transform: scale(.5);
+        transform: scale(.50);
     }
     to {
         transform: none;
