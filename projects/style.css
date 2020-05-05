@@ -77,14 +77,8 @@ html, body {
 }
 
 .projectCard {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-    "cardHeader           cardHeader"
-    "cardDescription      cardDescription"
-    "cardTags             cardTags"
-    "cardLinks            cardLinks";
+    display: flex;
+    flex-direction: column;
 
     background-color: whitesmoke;
     margin-top: 50px;
@@ -94,7 +88,6 @@ html, body {
 }
 
 .projectCard .cardHeader{
-    grid-area: cardHeader;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -108,20 +101,14 @@ html, body {
     text-align: center;
 }
 
-.projectCard .cardDescription {
-    grid-area: cardDescription
-}
-
 .projectCard .cardTags  {
     display: flex;
     flex-direction: row;
-    grid-area: cardTags;
 }
 
 .projectCard .cardLinks {
     display: flex;
     flex-direction: row;
-    grid-area: cardLinks;
 }
 
 .projectCard .cardImage img {
@@ -191,10 +178,6 @@ html, body {
         margin-top: 25px;
         margin-left: 5px;
         margin-right: 5px;
-    }
-
-    .projectCard {
-        grid-template-columns: 1fr 5fr;
     }
 }
 
