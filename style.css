@@ -38,14 +38,14 @@ html, body {
     left: 0;
 }
 
-#image {
+#pfpContainer {
     height: 30%;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 10%
 }
 
-#image img {
+#pfpContainer img {
     border-radius: 100%;
     max-width: 100%;
     max-height: 100%;
@@ -54,7 +54,7 @@ html, body {
     animation: fade 1s, zoom 1s;
 }
 
-#text {
+#textContainer {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -65,7 +65,7 @@ html, body {
     margin-bottom: 10%;
 }
 
-#text h1 {
+#textContainer h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 300%;
@@ -76,7 +76,7 @@ html, body {
     margin-bottom: 0;
 }
 
-#text h2 {
+#textContainer h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 100%;
@@ -86,10 +86,10 @@ html, body {
     animation: fade 1s, zoom 1s;
 }
 
-#text .description {
+#textContainer .description {
     margin-bottom: 10%;
 }
-#text .button {
+#textContainer .button {
     font-family: 'Montserrat', sans-serif;
     background-color: #00afff;
     font-size: 100%;
@@ -102,7 +102,7 @@ html, body {
     animation: fade 1s, zoom 1s;
 }
 
-#text .button:hover {
+#textContainer .button:hover {
     background-color: #33bfff;
     cursor: pointer;
 }
@@ -120,7 +120,7 @@ html, body {
         flex-direction: row;
     }
 
-    #image {
+    #pfpContainer {
         width: 40%;
         height: 40%;
         margin-left: 10%;
@@ -128,7 +128,7 @@ html, body {
         margin-top: 0;
     }
     
-    #text {
+    #textContainer {
         height: 100%;
         width: 60%;
         margin-right: 10%;
@@ -140,14 +140,14 @@ html, body {
 /* Portrait widescreen (ex tablets) -- display text in large font*/
 @media only screen and (min-width: 768px) and (orientation: portrait){
     
-    #text h1 {
+    #textContainer h1 {
         font-size: 500%;
     }
     
-    #text h2 {
+    #textContainer h2 {
         font-size: 200%;
     }
-    #text .button {
+    #textContainer .button {
         font-size: 200%;
         padding: 4% 10%;
     }
@@ -156,22 +156,22 @@ html, body {
 /* Portrait tall screen (ex tall phones) -- increase button size*/
 @media only screen and (min-height: 768px) and (orientation: portrait){
     
-    #text .button {
+    #textContainer .button {
         padding: 4% 10%;
     }
 } 
 
 /* Landscape tall display (ex: computer)s */
 @media only screen and (min-height: 768px) and (orientation: landscape){
-    #text h1 {
+    #textContainer h1 {
         font-size: 500%;
     }
     
-    #text h2 {
+    #textContainer h2 {
         font-size: 200%;
     }
 
-    #text .button {
+    #textContainer .button {
         font-size: 200%;
         padding: 4% 10%;
     }
@@ -180,15 +180,15 @@ html, body {
 
 /* Landscape short display (ex: phones) */
 @media only screen and (max-height: 450px) and (orientation: landscape){
-    #text h1 {
+    #textContainer h1 {
         font-size: 200%;
     }
     
-    #text h2 {
+    #textContainer h2 {
         font-size: 100%;
     }
 
-    #text .button {
+    #textContainer .button {
         font-size: 100%;
     }
     
