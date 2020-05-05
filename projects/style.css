@@ -68,8 +68,7 @@ html, body {
 #projects {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
     
     width: 90%;
     padding-left: 5%;
@@ -82,7 +81,7 @@ html, body {
 
     background-color: whitesmoke;
     margin-top: 50px;
-    max-width: 500px;
+    max-width: 100%;
     padding: 10px 10px;
     animation: fade 1s, zoom 1s;
 }
@@ -116,7 +115,7 @@ html, body {
     width: 50px;
 }
 
-.projectCard .cardTitle h1{
+.projectCard .cardTitle h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 200%;
@@ -126,6 +125,10 @@ html, body {
     margin-bottom: 5%;
     margin-left: 5%;
     width: 100%;
+}
+
+.projectCard .cardDescription {
+    flex: 1 0 auto;
 }
 
 .projectCard .cardDescription p, .projectCard .cardTags p , .projectCard .cardLinks a{
@@ -170,7 +173,6 @@ html, body {
 
     #content #projects {
         flex-direction: row;
-        justify-content: center;
         flex-wrap: wrap;
     }
 
@@ -178,6 +180,7 @@ html, body {
         margin-top: 25px;
         margin-left: 5px;
         margin-right: 5px;
+        max-width: 30%;
     }
 }
 
